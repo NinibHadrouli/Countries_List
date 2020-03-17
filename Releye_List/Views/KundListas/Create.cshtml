@@ -1,0 +1,39 @@
+﻿@model Releye_List.Models.KundLista
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h3 class="bg-primary p-sm-1 rounded-lg text-white">Lägg en ny kund</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label>Namn</label>
+                <input asp-for="Namn" class="form-control" />
+                <span asp-validation-for="Namn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label> Land</label>
+                <select asp-for="LandListaId" class ="form-control" asp-items="ViewBag.LandListaId">
+                    <option>Vänligen välj</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Spara" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-outline-primary" asp-action="Index">Tillbaka </a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

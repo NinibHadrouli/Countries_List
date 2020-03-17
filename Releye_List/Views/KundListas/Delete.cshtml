@@ -1,0 +1,33 @@
+﻿@model Releye_List.Models.KundLista
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+    <h2 class="bg-danger p-sm-1 rounded-lg text-white">Radera</h2>
+
+<h4>Är du säker på att du vill ta bort  @Model.Namn ?</h4>
+<div>
+    @*<h4>@Model.Namn</h4>*@
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Namn
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Namn)
+        </dd>
+        <dt class = "col-sm-2">
+           Land
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LandLista.Namn)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Radera" class="btn btn-danger" /> 
+        <a class="btn btn-outline-primary" asp-action="Index">Tillbaka</a>
+    </form>
+</div>

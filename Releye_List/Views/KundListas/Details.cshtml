@@ -1,0 +1,30 @@
+﻿@model Releye_List.Models.KundLista
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h3 class="bg-primary p-sm-1 rounded-lg text-white">Detaljer</h3>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+           Namn
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Namn)
+        </dd>
+        <dt class = "col-sm-2">
+          Land
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LandLista.Namn)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.Id">Redigera</a> 
+    <a class="btn btn-outline-primary" asp-action="Index">Tillbaka</a>
+</div>

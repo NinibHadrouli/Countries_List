@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Releye_List.Models.KundLista>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="bg-info p-sm-1 rounded-lg text-white">Kund Lista</h1>
+
+<p>
+    <a class="btn btn-outline-info  fa fa-plus-square" asp-action="Create"> Lägg till ny kund</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Namn
+            </th>
+            <th>
+                Land
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr  onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">
+            <td>
+                @Html.DisplayFor(modelItem => item.Namn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LandLista.Namn)
+            </td>
+            <td class="btn btn-group float-right">
+                <a class="btn btn-outline-info " data-toggle="tooltip" data-placement="top" title="Redigera Kund" asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i> Redigera</a> 
+                <a class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Detaljer" asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-info-circle"></i> Detaljer</a> 
+                <a class="btn  btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Radera" asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

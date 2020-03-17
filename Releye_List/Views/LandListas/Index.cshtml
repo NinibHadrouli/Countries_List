@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Releye_List.Models.LandLista>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <h1 class="bg-secondary p-sm-1 rounded-lg text-white">Land Lista</h1>
+
+<p>
+    <a class="btn btn-outline-secondary  fa fa-plus-square" asp-action="Create"> Lägg till ett land</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Namn
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Namn)
+            </td>
+            <td class="btn btn-group float-right">
+                <a class="btn btn-outline-secondary " data-toggle="tooltip" data-placement="top" title="Redigera Land" asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i> Redigera</a>
+
+                <a class="btn  btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Radera" asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

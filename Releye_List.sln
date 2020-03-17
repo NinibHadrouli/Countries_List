@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Releye_List", "Releye_List\Releye_List.csproj", "{BEBB3B27-7865-4389-ABB3-D38446C604DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEBB3B27-7865-4389-ABB3-D38446C604DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEBB3B27-7865-4389-ABB3-D38446C604DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEBB3B27-7865-4389-ABB3-D38446C604DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEBB3B27-7865-4389-ABB3-D38446C604DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC1C47A6-CAC9-4A58-ACBB-6B0087CB8A9A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+Ett Viktigt steg för att följa lägg till migration 
+
+i Visual Studio :
+* Välj NuGet Package Manager > Package Manager Console. view - other windows - package manager console.
+
+
+
+Add-migration Namn
+Update-database
